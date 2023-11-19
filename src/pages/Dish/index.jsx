@@ -68,7 +68,7 @@ export function Dish({ isAdmin, user_id }) {
         setCartId(createdCart.id);
       }
 
-      alert('Prato adicionado ao carrinho!');
+      alert('Prato principal adicionado ao carrinho!');
     } catch (error) {
       if (error.response) {
         alert(error.response.data.message);
@@ -134,7 +134,7 @@ export function Dish({ isAdmin, user_id }) {
                 <div className="buttons">
                   {isAdmin ? 
                     <Button 
-                      title="Editar prato" 
+                      title="Editar prato principal" 
                       className="edit" 
                       onClick={handleEdit}
                       loading={loading}

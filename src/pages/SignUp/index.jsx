@@ -61,7 +61,7 @@ export function SignUp() {
 
         <Section title="Seu nome">
           <Input 
-            placeholder="Exemplo: Maria da Silva" 
+            placeholder="Exemplo: Adrian Siqueira" 
             type="text"
             onChange={e => setName(e.target.value)}
           />
@@ -86,7 +86,7 @@ export function SignUp() {
         <Button title="Criar conta" onClick={handleSignUp} loading={loading} />
 
         <Link to="/">
-          Já tenho uma conta
+        Já possuo um cadastro
         </Link>
       </Form>
     </Container>

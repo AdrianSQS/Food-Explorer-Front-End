@@ -33,7 +33,7 @@ export function Menu({ isAdmin, isMenuOpen, setIsMenuOpen, setSearch, isDisabled
 
         {isAdmin ? (
           <ButtonText onClick={handleNew}>
-            Novo prato
+            Novo prato principal
           </ButtonText>
         ) : null}
 

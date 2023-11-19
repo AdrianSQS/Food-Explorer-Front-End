@@ -1,18 +1,16 @@
 import { useState } from "react";
 
-import { BiPencil } from "react-icons/bi";
 import { FiHeart } from "react-icons/fi";
-import { RxCaretRight } from "react-icons/rx";
-
-import { useMediaQuery } from "react-responsive";
-import theme from "../../styles/theme";
-
-import { useParams, useNavigate } from 'react-router-dom';
 import { api } from '../../services/api';
-
-import { Container, Title, Order } from "./styles";
-import { NumberPicker } from '../../components/NumberPicker';
+import { BiPencil } from "react-icons/bi";
+import { RxCaretRight } from "react-icons/rx";
 import { Button } from "../../components/Button";
+import { useMediaQuery } from "react-responsive";
+import { Container, Title, Order } from "./styles";
+import { useParams, useNavigate } from 'react-router-dom';
+import { NumberPicker } from '../../components/NumberPicker';
+
+import theme from "../../styles/theme";
 
 export function Food({ data, isAdmin, isFavorite, updateFavorite, handleDetails, user_id, ...rest }) {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
@@ -63,7 +61,7 @@ export function Food({ data, isAdmin, isFavorite, updateFavorite, handleDetails,
         setCartId(createdCart.id);
       }
 
-      alert('Prato adicionado ao carrinho!');
+      alert('Prato principal adicionado ao carrinho!');
     } catch (error) {
       if (error.response) {
         alert(error.response.data.message);
@@ -90,7 +88,7 @@ export function Food({ data, isAdmin, isFavorite, updateFavorite, handleDetails,
 
       <img 
         src={`${api.defaults.baseURL}/files/${data.image}`} 
-        alt="Imagem do prato." 
+        alt="Imagem do prato principal." 
         onClick={() => handleDetails(data.id)} 
       />
       

@@ -5,7 +5,7 @@ import { Container } from "./styles";
 export function Favorite({ data, removeFavorite }) {
   return (
     <Container>
-      <img src={`${api.defaults.baseURL}/files/${data.image}`} alt="Imagem do prato." />
+      <img src={`${api.defaults.baseURL}/files/${data.image}`} alt="Imagem do prato principal." />
       
       <div>
         <h2>{data.name}</h2>

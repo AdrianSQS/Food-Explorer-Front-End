@@ -179,7 +179,7 @@ export function New({ isAdmin }) {
                     onChange={e => setCategory(e.target.value)}
                   >
                     <option value="">Selecionar</option>
-                    <option value="meal">Refeição</option>
+                    <option value="meal">Prato Principal</option>
                     <option value="dessert">Sobremesa</option>
                     <option value="beverage">Bebida</option>
                   </select>
@@ -225,7 +225,7 @@ export function New({ isAdmin }) {
 
           <Section title="Descrição">
             <Textarea 
-              placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"
+              placeholder="Forneça uma breve apresentação do prato, destacando seus ingredientes e composição"
               onChange={(e) => setDescription(e.target.value)}
             />
           </Section>

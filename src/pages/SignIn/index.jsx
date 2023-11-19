@@ -1,10 +1,7 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-
 import { useAuth } from '../../hooks/auth';
-
 import { Container, Form, Brand } from "./styles";
-
 import { Section } from '../../components/Section';
 import { Input } from '../../components/Input';
 import { Button } from "../../components/Button";
@@ -31,7 +28,7 @@ export function SignIn() {
       </Brand>
 
       <Form>
-        <h2>Faça seu login</h2>
+        <h2>Entre na sua conta.</h2>
 
         <Section title="Email">
           <Input 

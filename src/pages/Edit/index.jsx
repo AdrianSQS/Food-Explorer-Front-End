@@ -93,33 +93,33 @@ export function Edit({ isAdmin }) {
 
   async function handleEditDish() {
     if (!image) {
-      return alert("Selecione a imagem do prato.");
+      return alert("Selecione a imagem do prato principal.");
     }
 
     if (!name) {
-      return alert("Digite o nome do prato.");
+      return alert("Digite o nome do prato principal.");
     }
 
     if (!category) {
-      return alert("Selecione a categoria do prato.");
+      return alert("Selecione a categoria do prato principal.");
     }
 
     if (tags.length === 0) {
-      return alert("Informe pelo menos um ingrediente do prato.");
+      return alert("É necessário informar pelo menos um ingrediente para o prato principal.");
     }
 
     if (newTag) {
       return alert(
-        "Você deixou um ingrediente no campo para adicionar, mas não clicou em adicionar. Clique para adicionar ou deixe o campo vazio."
+        "Você inseriu um ingrediente no campo de adição, mas não clicou em 'Adicionar'. Por favor, clique para adicionar ou deixe o campo vazio."
       );
     }
 
     if (!price) {
-      return alert("Digite o preço do prato.");
+      return alert("Digite o preço do prato principal.");
     }
 
     if (!description) {
-      return alert("Digite a descrição do prato.");
+      return alert("Digite a descrição do prato principal.");
     }
 
     setLoading(true);
@@ -144,7 +144,7 @@ export function Edit({ isAdmin }) {
   
       await api.patch(`/dishes/${params.id}`, updatedDish);
   
-      alert("Prato atualizado com sucesso!");
+      alert("Prato principal atualizado com sucesso!");
       navigate(-1);
     } catch (error) {
       if (error.response) {
@@ -158,7 +158,7 @@ export function Edit({ isAdmin }) {
 	}
 
   async function handleRemoveDish() {
-    const confirm = window.confirm("Deseja realmente remover o prato?");
+    const confirm = window.confirm("Tem certeza de que deseja excluir o prato?");
   
     if (confirm) {
       setLoading(true);
@@ -170,7 +170,7 @@ export function Edit({ isAdmin }) {
         if (error.response) {
           alert(error.response.data.message);
         } else {
-          alert("Não foi possível excluir o prato.");
+          alert("A exclusão do prato não pôde ser realizada.");
         }
       } finally {
         setLoading(false);
@@ -225,7 +225,7 @@ export function Edit({ isAdmin }) {
 
             <Section title="Nome">
               <Input className="name"
-                placeholder="Ex.: Salada Ceasar"
+                placeholder="Ex.: Badejo à brasileira"
                 type="text"
                 value={name}
                 onChange={e => setName(e.target.value)}
@@ -241,7 +241,7 @@ export function Edit({ isAdmin }) {
                     onChange={e => setCategory(e.target.value)}
                   >
                     <option value="">Selecionar</option>
-                    <option value="meal">Refeição</option>
+                    <option value="meal">Prato Principal</option>
                     <option value="dessert">Sobremesa</option>
                     <option value="beverage">Bebida</option>
                   </select>

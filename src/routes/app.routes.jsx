@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 
-import { New } from "../pages/New";
-import { Edit } from "../pages/Edit";
-import { Home } from "../pages/Home";
 import { Dish } from "../pages/Dish";
+import { Edit } from "../pages/Edit";
 import { Favorites } from "../pages/Favorites";
+import { Home } from "../pages/Home";
+import { New } from "../pages/New";
 
 export function AppRoutes({ isAdmin }) {
   return (
