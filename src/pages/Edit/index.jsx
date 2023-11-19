@@ -1,25 +1,20 @@
-import { useState, useEffect } from 'react';
-import { useMediaQuery } from "react-responsive";
-
-import { useParams, useNavigate } from 'react-router-dom';
-
-import { RxCaretLeft } from "react-icons/rx";
-import { FiUpload } from "react-icons/fi";
-import { RiArrowDownSLine } from "react-icons/ri";
-
 import { api } from '../../services/api';
-
-import { Container, Form, Image, Category } from "./styles";
-
+import { FiUpload } from "react-icons/fi";
+import { useState, useEffect } from 'react';
+import { RxCaretLeft } from "react-icons/rx";
 import { Menu } from "../../components/Menu";
-import { Header } from '../../components/Header';
-import { ButtonText } from "../../components/ButtonText";
-import { Section } from '../../components/Section';
 import { Input } from '../../components/Input';
-import { FoodItem } from '../../components/FoodItem';
-import { Textarea } from '../../components/Textarea';
+import { useMediaQuery } from "react-responsive";
+import { Header } from '../../components/Header';
 import { Button } from "../../components/Button";
 import { Footer } from '../../components/Footer';
+import { RiArrowDownSLine } from "react-icons/ri";
+import { Section } from '../../components/Section';
+import { Textarea } from '../../components/Textarea';
+import { FoodItem } from '../../components/FoodItem';
+import { ButtonText } from "../../components/ButtonText";
+import { useParams, useNavigate } from 'react-router-dom';
+import { Container, Form, Image, Category } from "./styles";
 
 export function Edit({ isAdmin }) {
   const isDesktop = useMediaQuery({ minWidth: 1024 });

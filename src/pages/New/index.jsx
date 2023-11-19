@@ -1,25 +1,20 @@
 import { useState } from 'react';
-import { useMediaQuery } from "react-responsive";
-
-import { useNavigate } from 'react-router-dom';
-
-import { RxCaretLeft } from "react-icons/rx";
-import { FiUpload } from "react-icons/fi";
-import { RiArrowDownSLine } from "react-icons/ri";
-
 import { api } from '../../services/api';
-
-import { Container, Form, Image, Category } from "./styles";
-
+import { FiUpload } from "react-icons/fi";
 import { Menu } from "../../components/Menu";
-import { Header } from '../../components/Header';
-import { ButtonText } from "../../components/ButtonText";
-import { Section } from '../../components/Section';
+import { RxCaretLeft } from "react-icons/rx";
+import { useNavigate } from 'react-router-dom';
 import { Input } from '../../components/Input';
-import { FoodItem } from '../../components/FoodItem';
-import { Textarea } from '../../components/Textarea';
+import { useMediaQuery } from "react-responsive";
+import { Header } from '../../components/Header';
 import { Button } from "../../components/Button";
 import { Footer } from '../../components/Footer';
+import { RiArrowDownSLine } from "react-icons/ri";
+import { Section } from '../../components/Section';
+import { FoodItem } from '../../components/FoodItem';
+import { Textarea } from '../../components/Textarea';
+import { ButtonText } from "../../components/ButtonText";
+import { Container, Form, Image, Category } from "./styles";
 
 export function New({ isAdmin }) {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
@@ -61,33 +56,33 @@ export function New({ isAdmin }) {
 
   async function handleNewDish() {
     if (!image) {
-      return alert("Selecione a imagem do prato.");
+      return alert("Selecione a imagem do prato principal.");
     }
 
     if (!name) {
-      return alert("Digite o nome do prato.");
+      return alert("Digite o nome do prato principal.");
     }
 
     if (!category) {
-      return alert("Selecione a categoria do prato.");
+      return alert("Selecione a categoria do prato principal.");
     }
 
     if (tags.length === 0) {
-      return alert("Informe pelo menos um ingrediente do prato.");
+      return alert("Por favor, inclua pelo menos um ingrediente para o prato principal.");
     }
 
     if (newTag) {
       return alert(
-        "Você deixou um ingrediente no campo para adicionar, mas não clicou em adicionar. Clique para adicionar ou deixe o campo vazio."
+        "Você inseriu um ingrediente no campo de adição, mas ainda não clicou em 'Adicionar'. Por favor, clique para adicionar ou deixe o campo vazio.."
       );
     }
 
     if (!price) {
-      return alert("Digite o preço do prato.");
+      return alert("Digite o preço do prato principal.");
     }
 
     if (!description) {
-      return alert("Digite a descrição do prato.");
+      return alert("Digite a descrição do prato principal.");
     }
 
     setLoading(true);
@@ -98,19 +93,22 @@ export function New({ isAdmin }) {
     formData.append("category", category);
     formData.append("price", price);
     formData.append("description", description);
-
     formData.append("ingredients", JSON.stringify(tags));
 
     try {
       await api.post("/dishes", formData);
-      alert("Prato cadastrado com sucesso!");
+      alert("Prato principal cadastrado com sucesso!");
       navigate(-1);
+
     } catch (error) {
+
       if (error.response) {
         alert(error.response.data.message);
+
       } else {
         alert("Não foi possível cadastrar o prato.");
       }
+
     } finally {
       setLoading(false);
     }
@@ -146,7 +144,7 @@ export function New({ isAdmin }) {
           </header>
 
           <div>
-            <Section title="Imagem do prato">
+            <Section title="Imagem do prato principal">
               <Image className="image">
                 <label htmlFor="image">
                   <FiUpload size={"2.4rem"} />
@@ -163,7 +161,7 @@ export function New({ isAdmin }) {
 
             <Section title="Nome">
               <Input className="name"
-                placeholder="Ex.: Salada Ceasar"
+                placeholder="Ex.: Lagosta ao thermidor"
                 type="text"
                 value={name}
                 onChange={e => setName(e.target.value)}

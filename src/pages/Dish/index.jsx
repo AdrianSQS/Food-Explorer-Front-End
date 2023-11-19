@@ -1,19 +1,16 @@
-import { RxCaretLeft } from "react-icons/rx";
-import { useMediaQuery } from 'react-responsive';
-import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-
 import { api } from '../../services/api';
-
-import { Container, Content } from "./styles";
-
-import { Header } from '../../components/Header';
-import { Menu } from "../../components/Menu";
-import { ButtonText } from "../../components/ButtonText";
 import { Tag } from '../../components/Tag';
-import { NumberPicker } from "../../components/NumberPicker";
+import { useState, useEffect } from 'react';
+import { RxCaretLeft } from "react-icons/rx";
+import { Menu } from "../../components/Menu";
+import { Container, Content } from "./styles";
+import { useMediaQuery } from 'react-responsive';
+import { Header } from '../../components/Header';
 import { Button } from "../../components/Button";
 import { Footer } from '../../components/Footer';
+import { ButtonText } from "../../components/ButtonText";
+import { useParams, useNavigate } from 'react-router-dom';
+import { NumberPicker } from "../../components/NumberPicker";
 
 export function Dish({ isAdmin, user_id }) {
   const isDesktop = useMediaQuery({ minWidth: 1024 });
