@@ -106,7 +106,7 @@ export function New({ isAdmin }) {
         alert(error.response.data.message);
 
       } else {
-        alert("Não foi possível cadastrar o prato.");
+        alert("Não foi possível cadastrar o prato principal.");
       }
 
     } finally {

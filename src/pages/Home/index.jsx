@@ -130,17 +130,17 @@ export function Home({ isAdmin, user_id }) {
           <header>
             <img 
               src={isDesktop ? homeBanner : bannerMobile} 
-              alt="Macarons coloridos em tons pastel despencando juntamente com folhas verdes e frutas frescas." 
+              alt="Macarons coloridos caindo com folhas verdes e frutas frescas." 
             />
           
             <div>
-              <h1>Sabores inigualáveis</h1>
-              <p>Sinta o cuidado do preparo com ingredientes selecionados</p>
+              <h1>Experiências gustativas únicas</h1>
+              <p>Perceba a dedicação na preparação, com ingredientes criteriosamente escolhidos</p>
             </div>
           </header>
 
           <Content>
-            <Section title="Refeições">
+            <Section title="Pratos Principais">
               <swiper-container
                 key={isDesktop}
                 ref={swiperElRef1}
