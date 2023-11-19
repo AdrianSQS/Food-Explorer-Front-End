@@ -70,7 +70,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 <h2 id="usage">💡 Utilização</h2>
 
-O back-end do projeto está hospedado no endereço https://food-explorer-back-end-bles.onrender.com. A aplicação Food Explorer está disponível para uso [aqui](https://food-explorer-cardapio.netlify.app).
+O back-end do projeto está hospedado no endereço https://food-explorer-back-end-xr44.onrender.com. A aplicação Food Explorer está disponível para uso [aqui](https://food-explorer-cardapio.netlify.app).
 
 <h2 id="users">👩🏾‍💻 Personas</h2>
 
