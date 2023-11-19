@@ -1,13 +1,11 @@
-import { FiMenu, FiLogOut } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { useMediaQuery } from "react-responsive";
-
-import { useNavigate } from 'react-router-dom';
-import { Container, Menu, Brand, Logout } from "./styles";
 import { useAuth } from '../../hooks/auth';
-
+import { useNavigate } from 'react-router-dom';
+import { useMediaQuery } from "react-responsive";
 import { Search } from "../../components/Search";
 import { Button } from "../../components/Button";
+import { FiMenu, FiLogOut } from "react-icons/fi";
+import { Container, Menu, Brand, Logout } from "./styles";
 
 import brand from "../../assets/brand.svg";
 import brandAdmin from "../../assets/brand-admin.svg";

@@ -1,11 +1,9 @@
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../hooks/auth';
-
-import { Container } from "./styles";
-
-import { Header } from '../../components/Header';
 import { Search } from "../Search";
+import { Container } from "./styles";
 import { ButtonText } from "../ButtonText";
+import { useAuth } from '../../hooks/auth';
+import { useNavigate } from 'react-router-dom';
+import { Header } from '../../components/Header';
 
 export function Menu({ isAdmin, isMenuOpen, setIsMenuOpen, setSearch, isDisabled }) {
   const { signOut } = useAuth();
