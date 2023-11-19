@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: 'http://localhost:5173'
+  baseURL: 'https://food-explorer-back-end-bles.onrender.com'
 });
