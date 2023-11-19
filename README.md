@@ -70,7 +70,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 <h2 id="usage">💡 Utilização</h2>
 
-A aplicação Food Explorer está disponível para uso [aqui](https://food-explorer-frontend-80e47f.netlify.app/).
+A aplicação Food Explorer está disponível para uso [aqui](https://food-explorer-menu.netlify.app).
 
 <h2 id="users">👩🏾‍💻 Personas</h2>
 
